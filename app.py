@@ -9,6 +9,7 @@ app = Flask(__name__)
 def agregar():  # put application's code here
     request_body = request.get_json()
     agregar_datos(request_body['km'])
+    return 'km añadidos'
 
 
 @app.route('/')
