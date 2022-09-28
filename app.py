@@ -1,4 +1,5 @@
 from flask import Flask
+from funciones import euribor_scraping
 
 app = Flask(__name__)
 
@@ -14,5 +15,6 @@ if __name__ == '__main__':
 
 @app.route('/saluda')
 def saluda():
-    return 'Saluda'
+    valor = euribor_scraping()
+    return valor
 
